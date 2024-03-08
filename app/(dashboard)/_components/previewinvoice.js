@@ -67,7 +67,7 @@ export default function PreviewInvoice({ values }) {
 
         <article>
           <h2 className="text-4xl text-slate-900 font-bold my-8">
-            Kshs. {values.totalAmount}
+            Total. {values.totalAmount}
           </h2>
         </article>
 

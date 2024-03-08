@@ -9,7 +9,7 @@ export default function Home() {
     <div className="p-4">
       <header className="flex items-center justify-between">
         <Button variant="outline">
-          <Link href="/">Invoicer</Link>
+        <strong><a href="/">Bill V2</a></strong>
         </Button>
 
         {userId ? (
@@ -37,13 +37,12 @@ export default function Home() {
         <div className="absolute right-0 bottom-0 h-40 w-40 bg-blue-400 blur-[100px]"></div>
 
         <h1 className="text-4xl lg:text-6xl text-slate-800 font-bold">
-          Welcome to Invoicer V2
+          Welcome to Bill V2
         </h1>
         <p className="text-muted-foreground text-lg lg:text-xl">
           Easily create invoices for yourself, your clients all at the
           convenience of your mobile phone or PC. Version 2 offers improved
-          performance, better responsiveness on mobile, and better UI design by
-          Thomas Sankara.
+          performance, better responsiveness on mobile
         </p>
 
         {userId ? (
