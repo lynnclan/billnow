@@ -103,22 +103,24 @@ export default function Dashboard() {
     setPrice(editingRow.price);
   }
 
-  // Create PDF
+  //createPDF
   function createPDF() {
     const invoice = document.getElementById("pdf");
     html2canvas(invoice, {
       logging: true,
       letterRendering: 1,
       useCORS: true,
+      scale: 3, // Adjust the scale to improve quality
     }).then((canvas) => {
       const imgWidth = 208;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      const imgData = canvas.toDataURL("img/png");
+      const imgData = canvas.toDataURL("image/jpeg", 0.9); // Use image/jpeg format and slightly lower quality
       const pdf = new jsPDF("portrait", "mm", "a4");
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.addImage(imgData, "JPEG", 0, 0, imgWidth, imgHeight);
       pdf.save(`${clientName}.pdf`);
     });
-  }
+}
+
 
   const values = {
     name,

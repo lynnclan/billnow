@@ -9,7 +9,7 @@ export default function Home() {
     <div className="p-4">
       <header className="flex items-center justify-between">
         <Button variant="outline">
-        <strong><a href="/">Bill V2</a></strong>
+          <strong><a href="/">Bill V2</a></strong>
         </Button>
 
         {userId ? (
@@ -63,6 +63,25 @@ export default function Home() {
             </li>
           </ul>
         )}
+      </section>
+
+      {/* Ads Section */}
+      <section className="py-8 -mt-12 bg-gray-100"> {/* Adjusted margin-top */}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-8 underline">
+            Featured Businesses
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Individual Ad Boxes */}
+            <div className="ad-box bg-black p-6 shadow-md rounded-lg">
+              <h3 className="text-xl font-semibold text-purple-500 underline">Business Name 1</h3>
+              <p className="text-white neon-black mt-4">Offerings: Description of what the business offers.</p>
+              <p className="text-pink-500 neon-blue">Website: <a href="https://www.example.com" className="text-pink-500 neon-blue underline">www.example.com</a></p>
+              <p className="text-green-500 neon-pink">Contact: contact@example.com | 123-456-7890</p>
+            </div>
+            {/* Repeat similar structure for other ad boxes */}
+          </div>
+        </div>
       </section>
     </div>
   );
